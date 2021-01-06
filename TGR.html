@@ -1,0 +1,4824 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Carte cartographique</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="leaflet.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+#mymap {
+    height: 90%;
+}
+h1 {font-size: 95%}
+
+</style>
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+
+
+</head>
+<body>
+	<h1 align="center">Carte cartographique <b>TGR</h1>
+	<div id="mymap" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;">
+		<div class="leaflet-map-pane" style="transform: translate3d(0px, -22px, 0px);">
+			<div class="leaflet-tile-pane"><div class="leaflet-layer" style="z-index: 2;"><div class="leaflet-tile-container">
+
+			</div>
+			
+	<script src="leaflet.js.téléchargement"></script>
+	<script src="leaflet-providers.js.téléchargement"></script>
+
+	<script>
+
+        // Les données des ambassades .json
+
+
+ var data = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+
+    "type": "Feature",
+            "properties": {
+"Code": 2010,
+"Latitude": 36.759355,
+"Longitude": 3.044705,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ALGER",
+"#Libell� abreg�": "ACE ALGER",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.759355, 3.044705]
+         } },
+            {
+            "type": "Feature",
+            "properties": {
+            
+"Code": 2011,
+"Latitude": 36.759359,
+"Longitude": 3.044709,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ALGER",
+"#Libell� abreg�": "ACE ALGER",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.759359, 3.044709]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2012,
+"Latitude": 35.69111,
+"Longitude": -0.64167,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ORAN",
+"#Libell� abreg�": "REGIE ORAN",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 2010,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.69111, -0.64167]
+            }
+        },
+        
+        {
+            "type": "Feature",
+            "properties": {
+            
+                "Code": 2012,
+"Latitude": 35.69119,
+"Longitude": -0.64177,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE CONSULAT DU MAROC A ORAN (ALGERIE)",
+"#Libell� abreg�": "ACE ORAN",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [35.69119, -0.64177]
+            }},
+        
+            {
+            "type": "Feature",
+            "properties": {
+            
+"Code": 2013,
+"Latitude": 35.18999,
+"Longitude": -0.63089,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE CONSULAT DU MAROC A SIDI BEN LABAS (ALGERIE)",
+"#Libell� abreg�": "ACE SIDI BEN LABAS",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [35.18999, -0.63089]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+            
+"Code": 2013,
+"Latitude": 35.18994,
+"Longitude": -0.63085,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A SIDI BEL ABBES",
+"#Libell� abreg�": "REGIE SIDI BEL ABBES",
+"ML": "DZD",
+"DF": "EUR",
+"Monnaie": "DZD/EUR",
+"Rattachement": 2010,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [35.18994, -0.63085]
+            }},
+
+{
+            "type": "Feature",
+            "properties": {
+            
+"Code": 2020,
+"Latitude": 24.680213,
+"Longitude": 46.622092,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A RIYAD",
+"#Libell� abreg�": "ACE RIYAD",
+"ML": "SAR",
+"DF": "Null",
+"Monnaie": "SAR",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [24.680213, 46.622092]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+            
+"Code": 2021,
+"Latitude": 21.538628,
+"Longitude": 39.15782,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DJEDDAH",
+"#Libell� abreg�": "REGIE DJEDDAH",
+"ML": "SAR",
+"DF": "Null",
+"Monnaie": "SAR",
+"Rattachement": 2020,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [21.538628, 39.15782]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2030,
+"Latitude": -34.603722,
+"Longitude": -58.381592,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BUENOS AIRES",
+"#Libell� abreg�": "ACE BUENOS",
+"ML": "ARS",
+"DF": "USD",
+"Monnaie": "ARS/USD",
+"Rattachement": 0,
+"GMT": "GMT -3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [-34.603722, -58.381592]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2040,
+"Latitude": 52.089453,
+"Longitude": 5.087699,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  UTRECHT",
+"#Libell� abreg�": "REGIE UTRECHT",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2422,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [52.089453, 5.087699]
+            }},
+
+             {
+            "type": "Feature",
+            "properties": {
+                "Code": 2040,
+"Latitude": 52.089459,
+"Longitude": 5.087691,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  UTRECHT",
+"#Libell� abreg�": "REGIE UTRECHT",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2420,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [52.089459, 5.087691]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2040,
+"Latitude": 48.233668,
+"Longitude": 16.335182,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA VIENNE",
+"#Libell� abreg�": "ACE VIENNE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [48.233668, 16.335182]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2050,
+"Latitude": 50.835596,
+"Longitude": 4.406105,
+"Type": "ACE",
+"Libellé": "PAYEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BRUXELLES",
+"#Libell� abreg�": "ACE BRUXELLES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.835596, 4.406105]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2051,
+"Latitude": 51.178044,
+"Longitude": 4.354679,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ANVERS",
+"#Libell� abreg�": "REGIE ANVERS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2054,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [51.178044, 4.354679]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2051,
+"Latitude": 51.178049,
+"Longitude": 4.354689,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ANVERS",
+"#Libell� abreg�": "REGIE ANVERS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2050,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [51.178049, 4.354689]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2052,
+"Latitude": 50.835599,
+"Longitude": 4.40611,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  BRUXELLES",
+"#Libell� abreg�": "REGIE BRUXELLES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2050,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.835599, 4.40611]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2053,
+"Latitude": 50.644342,
+"Longitude": 5.567853,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  LIEGE",
+"#Libell� abreg�": "REGIE LIEGE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2054,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.644342, 5.567853]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2053,
+"Latitude": 50.6445,
+"Longitude": 5.56786,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  LIEGE",
+"#Libell� abreg�": "REGIE LIEGE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2050,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.6445, 5.56786]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+                "Code": 2054,
+"Latitude": 50.8356,
+"Longitude": 4.40612,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU REPRESENTANT PERMANENT DU ROYAUME DU MAROC A BRUXELLES (UE)",
+"#Libell� abreg�": "ACE BRUXELLES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.8356, 4.40612]
+            }},
+
+
+{
+            "type": "Feature",
+            "properties":{
+"Code": 2060,
+"Latitude": -15.77972,
+"Longitude": -47.92972,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA BRASILIA",
+"#Libell� abreg�": "ACE BRASILIA",
+"ML": "BRL",
+"DF": "USD",
+"Monnaie": "BRL/USD",
+"Rattachement": 0,
+"GMT": "GMT -3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [-15.77972, -47.92972]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2070,
+"Latitude": 42.673068,
+"Longitude": 23.32111,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SOFIA",
+"#Libell� abreg�": "ACE SOFIA",
+"ML": "BGN",
+"DF": "EUR",
+"Monnaie": "BGN/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [42.673068, 23.32111]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2070,
+"Latitude": 42.67307,
+"Longitude": 23.321119,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SOFIA",
+"#Libell� abreg�": "REGIE SOFIA",
+"ML": "BGN",
+"DF": "EUR",
+"Monnaie": "BGN/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [42.67307, 23.321119]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2070,
+"Latitude": 32.11486,
+"Longitude": 20.06859,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  BENGHAZI",
+"#Libell� abreg�": "REGIE BENGHAZI",
+"ML": "LYD",
+"DF": "USD",
+"Monnaie": "LYD/USD",
+"Rattachement": 2370,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [32.11486, 20.06859]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2080,
+"Latitude": 12.36566,
+"Longitude": -1.53388,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A YAOUNDE",
+"#Libell� abreg�": "REGIE YAOUNDE",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [12.36566, -1.53388]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2090,
+"Latitude": 45.41117,
+"Longitude": -75.69812,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA OTTAWA",
+"#Libell� abreg�": "ACE OTTAWA",
+"ML": "CAD",
+"DF": "Null",
+"Monnaie": "CAD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [45.41117, -75.69812]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2091,
+"Latitude": "45,5087",
+"Longitude": "-73,554",
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MONTREAL",
+"#Libell� abreg�": "ACE MONTREAL",
+"ML": "CAD",
+"DF": "Null",
+"Monnaie": "CAD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [45,5087, -73,554]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2092,
+"Latitude": "45,509",
+"Longitude": "-73,5",
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CENTRE CULTUREL MAROCAIN -DAR ALMAGHREB -  A MONTREAL",
+"#Libell� abreg�": "ACE MONTREAL",
+"ML": "CAD",
+"DF": "Null",
+"Monnaie": "CAD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [45.509, -73.5]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2100,
+"Latitude": 39.938308,
+"Longitude": 116.455885,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A PEKIN",
+"#Libell� abreg�": "ACE PEKIN",
+"ML": "CNY",
+"DF": "USD",
+"Monnaie": "CNY/USD",
+"Rattachement": 0,
+"GMT": "GMT +8",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [39.938308, 116.455885]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2110,
+"Latitude": 5.33916,
+"Longitude": -4.013075,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ABIDJAN",
+"#Libell� abreg�": "ACE ABIDJAN",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT offset",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [5.33916, -4.013075]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2140,
+"Latitude": 55.737871,
+"Longitude": 12.571844,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A COPENHAGUE",
+"#Libell� abreg�": "ACE COPENHAGUE",
+"ML": "DKK",
+"DF": "Null",
+"Monnaie": "DKK",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [55.737871, 12.571844]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2150,
+"Latitude": 30.058452,
+"Longitude": 31.218618,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC AU CAIRE",
+"#Libell� abreg�": "ACE CAIRE",
+"ML": "EGP",
+"DF": "USD",
+"Monnaie": "EGP/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [30.058452, 31.218618]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2160,
+"Latitude": 24.456385,
+"Longitude": 54.367234,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ABOU DHABI",
+"#Libell� abreg�": "ACE ABOU DHABI",
+"ML": "AED",
+"DF": "Null",
+"Monnaie": "AED",
+"Rattachement": 0,
+"GMT": "GMT +4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [24.456385, 54.367234]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2161,
+"Latitude": 25.215093,
+"Longitude": 55.271701,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  DUBAI",
+"#Libell� abreg�": "REGIE DUBAI",
+"ML": "AED",
+"DF": "Null",
+"Monnaie": "AED",
+"Rattachement": 2160,
+"GMT": "GMT +4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [55.271701, 25.215093]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2170,
+"Latitude": 38.889931,
+"Longitude": -77.009003,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A WASHINGTON",
+"#Libell� abreg�": "ACE WASHINGTON",
+"ML": "USD",
+"DF": "Null",
+"Monnaie": "USD",
+"Rattachement": 0,
+"GMT": "GMT -8",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [38.889931, -77.009003]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2171,
+"Latitude": "40,7144",
+"Longitude": "-74,006",
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A NEW YORK",
+"#Libell� abreg�": "ACE NEW YORK",
+"ML": "USD",
+"DF": "Null",
+"Monnaie": "USD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [40,7144, -74,006]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2172,
+"Latitude": "40,715",
+"Longitude": "-74,016",
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE LA MISSION PERMANENTE DE L' ONU A NEW YORK",
+"#Libell� abreg�": "ACE NEW YORK",
+"ML": "USD",
+"DF": "Null",
+"Monnaie": "USD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [40.715, -74.016]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2180,
+"Latitude": 9.0003,
+"Longitude": 38.772609,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ADDIS ABBEBA",
+"#Libell� abreg�": "REGIE ABBEBA",
+"ML": "ETB",
+"DF": "USD",
+"Monnaie": "ETB/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [9.0003, 38.772609]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2180,
+"Latitude": 9.00029,
+"Longitude": 38.772605,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ADDIS ABEBA",
+"#Libell� abreg�": "ACE ADDIS",
+"ML": "ETB",
+"DF": "USD",
+"Monnaie": "ETB/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [9.00029, 38.772605]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2181,
+"Latitude": 9.000299,
+"Longitude": 38.77262,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE  DE LA MISSION PERMANANTE DU ROYAUME DU MAROC AUPRES DE L UNION AFRICAINE A ADDIS  ABEBA",
+"Libell� abreg�": "ACE ADDIS ABEBA",
+"ML": "XOF",
+"DF": "Null",
+"Monnaie": "XOF",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [9.000299, 38.77262]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2190,
+"Latitude": 40.44946,
+"Longitude": -3.683009,
+"Type": "ACE",
+"Libellé": "PAYEUR AUPR�S DE L'AMBASSADE DU ROYAUME DU MAROC � MADRID",
+"#Libell� abreg�": "ACE MADRID",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [40.44946, -3.683009]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2191,
+"Latitude": 28.114626,
+"Longitude": -15.420671,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  LAS PALMAS",
+"#Libell� abreg�": "REGIE LAS PALMAS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2198,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [28.114626, -15.420671]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2191,
+"Latitude": 28.11463,
+"Longitude": -15.42066,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  LAS PALMAS",
+"#Libell� abreg�": "REGIE LAS PALMAS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [28.11463, -15.42066]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2192,
+"Latitude": 41.379681,
+"Longitude": 2.153167,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BARCELONE",
+"#Libell� abreg�": "REGIE BARCELONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [41.379681, 2.153167]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2192,
+"Latitude": 41.3797,
+"Longitude": 2.1532,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  BARCELONE",
+"#Libell� abreg�": "ACE  BARCELONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [41.3797, 2.1532]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2195,
+"Latitude": 36.126537,
+"Longitude": -5.44533,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ALGESIRAS",
+"#Libell� abreg�": "REGIE ALGESIRAS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2196,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.126537,-5.44533]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2195,
+"Latitude": 36.126537,
+"Longitude": -5.44533,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ALGESIRAS",
+"#Libell� abreg�": "REGIE ALGESIRAS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.126537, -5.44533]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2196,
+"Latitude": 37.397762,
+"Longitude": -6.00559,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A SEVILLE",
+"#Libell� abreg�": "REGIE SEVILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [37.397762, -6.00559]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2196,
+"Latitude": 37.39777,
+"Longitude": -6.0056,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A SEVILLE",
+"#Libell� abreg�": "ACE  SEVILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [37.39777, -6.0056]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2197,
+"Latitude": 36.836488,
+"Longitude": -2.447011,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ALMERIA",
+"#Libell� abreg�": "REGIE ALMERIA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.836488, -2.447011]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2197,
+"Latitude": 36.836488,
+"Longitude": -2.447011,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ALMERIA",
+"#Libell� abreg�": "REGIE ALMERIA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2196,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [36.836488, -2.447011]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2198,
+"Latitude": 39.479288,
+"Longitude": -0.405465,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VALENCE",
+"#Libell� abreg�": "ACE  VALENCE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [39.479288, -0.405465] ////////////////////////////////// hna
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2198,
+"Latitude": 39.479288,
+"Longitude": -0.405465,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VALENCE",
+"#Libell� abreg�": "REGIE VALENCE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [-0.405465, 39.479288]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2200,
+"Latitude": 48.860083,
+"Longitude": 2.28679,
+"Type": "ACE",
+"Libellé": "PAYEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A PARIS",
+"#Libell� abreg�": "ACE PARIS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [2.28679, 48.860083]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2201,
+"Latitude": 48.862083,
+"Longitude": 2.28879,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PARIS",
+"#Libell� abreg�": "ACE PARIS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [2.28879, 48.862083]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2201,
+"Latitude": 48.861083,
+"Longitude": 2.28779,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PARIS",
+"#Libell� abreg�": "REGIE PARIS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.28779, 48.861083]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2203,
+"Latitude": 48.88727,
+"Longitude": 2.409702,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VILLEMOMBLE",
+"#Libell� abreg�": "REGIE VILLEMOMBLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2214,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [2.409702, 48.88727]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2203,
+"Latitude": 48.88727,
+"Longitude": 2.409702,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VILLEMOMBLE",
+"#Libell� abreg�": "REGIE VILLEMOMBLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.409702, 48.88727]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2204,
+"Latitude": 44.849447,
+"Longitude": -0.5989,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BORDEAUX",
+"#Libell� abreg�": "REGIE BORDEAUX",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-0.5989, 44.849447]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2204,
+"Latitude": 44.841447,
+"Longitude": -0.5999,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  BORDEAUX",
+"#Libell� abreg�": "ACE  BORDEAUX",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-0.5999, 44.841447]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2205,
+"Latitude": 50.635792,
+"Longitude": 3.05297,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A LILLE",
+"#Libell� abreg�": "REGIE LILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2206,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.05297, 50.635792]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2205,
+"Latitude": 50.635792,
+"Longitude": 3.05297,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A LILLE",
+"#Libell� abreg�": "REGIE LILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.05297, 50.635792]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2206,
+"Latitude": 45.7548,
+"Longitude": 4.8717,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A LYON",
+"#Libell� abreg�": "ACE  LYON",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.8717, 45.7548]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2206,
+"Latitude": 45.754877,
+"Longitude": 4.871578,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A LYON",
+"#Libell� abreg�": "REGIE LYON",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.871578, 45.754877]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2207,
+"Latitude": 43.298892,
+"Longitude": 5.382171,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MARSEILLE",
+"#Libell� abreg�": "REGIE MARSEILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.382171, 43.298892]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2207,
+"Latitude": 43.298992,
+"Longitude": 5.382271,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MARSEILLE",
+"#Libell� abreg�": "ACE  MARSEILLE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.382271, 43.298992]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2208,
+"Latitude": 43.264365,
+"Longitude": -2.933984,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  BILBAO",
+"#Libell� abreg�": "REGIE BILBAO",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-2.933984, 43.264365]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2209,
+"Latitude": 48.914703,
+"Longitude": 2.237238,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A COLOMBES",
+"#Libell� abreg�": "REGIE COLOMBES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2201,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.237238, 48.914703]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2209,
+"Latitude": 48.914703,
+"Longitude": 2.237238,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A COLOMBES",
+"#Libell� abreg�": "REGIE COLOMBES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.237238, 48.914703]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2210,
+"Latitude": 48.116587,
+"Longitude": -1.671869,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A RENNES",
+"#Libell� abreg�": "REGIE RENNES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-1.671869, 48.116587]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2210,
+"Latitude": 48.116587,
+"Longitude": -1.671869,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A RENNES",
+"#Libell� abreg�": "REGIE RENNES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2204,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-1.671869, 48.116587]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2211,
+"Latitude": 48.589169,
+"Longitude": 7.782256,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A STRASBOURG",
+"#Libell� abreg�": "REGIE STRASBOURG",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2206,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.782256, 48.589169]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2211,
+"Latitude": 48.589169,
+"Longitude": 7.782256,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A STRASBOURG",
+"#Libell� abreg�": "REGIE STRASBOURG",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.782256, 48.589169]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2212,
+"Latitude": 42.620359,
+"Longitude": 9.437242,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BASTIA",
+"#Libell� abreg�": "REGIE BASTIA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [9.437242, 42.620359]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2212,
+"Latitude": 42.620359,
+"Longitude": 9.437242,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BASTIA",
+"#Libell� abreg�": "REGIE BASTIA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2207,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [9.437242, 42.620359]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2213,
+"Latitude": 47.35735,
+"Longitude": 5.043516,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DIJON",
+"#Libell� abreg�": "REGIE DIJON",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.043516, 47.35735]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2213,
+"Latitude": 47.35735,
+"Longitude": 5.043516,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DIJON",
+"#Libell� abreg�": "REGIE DIJON",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2206,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.043516, 47.35735]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2214,
+"Latitude": 49.048408,
+"Longitude": 2.09579,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PONTOISE",
+"#Libell� abreg�": "REGIE PONTOISE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.09579, 49.048408]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2214,
+"Latitude": 49.048408,
+"Longitude": 2.09579,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PONTOISE",
+"#Libell� abreg�": "ACE PONTOISE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.09579, 49.048408]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2215,
+"Latitude": 43.601779,
+"Longitude": 1.458671,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TOULOUSE",
+"#Libell� abreg�": "REGIE TOULOUSE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.40612, 50.8356]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2215,
+"Latitude": 43.601779,
+"Longitude": 1.458671,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TOULOUSE",
+"#Libell� abreg�": "REGIE TOULOUSE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2204,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [1.458671, 43.601779]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2230,
+"Latitude": 0.421429,
+"Longitude": 9.442647,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LIBREVILLE",
+"#Libell� abreg�": "ACE LIBREVILLE",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [9.442647, 0.421429]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2240,
+"Latitude": 51.4958,
+"Longitude": -0.182176,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LONDRES",
+"#Libell� abreg�": "ACE LONDRES",
+"ML": "GBP",
+"DF": "Null",
+"Monnaie": "GBP",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-0.182176, 51.4958]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2241,
+"Latitude": 51.4959,
+"Longitude": -0.1823,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A LONDRES",
+"#Libell� abreg�": "ACE LONDERS",
+"ML": "GBP",
+"DF": "Null",
+"Monnaie": "GBP",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-0.1823, 51.4959]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2250,
+"Latitude": 37.998768,
+"Longitude": 23.769441,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ATHENES",
+"#Libell� abreg�": "ACE ATHENES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [23.769441, 37.998768]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2260,
+"Latitude": 9.53795,
+"Longitude": -13.67729,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A CONAKRY (GUINEE)",
+"#Libell� abreg�": "ACE CONAKRY",
+"ML": "GNF",
+"DF": "EUR",
+"Monnaie": "GNF/EUR",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-13.67729, 9.53795]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2270,
+"Latitude": 28.567893,
+"Longitude": 77.15799,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A NEW DELHI",
+"#Libell� abreg�": "ACE NEW DELHI",
+"ML": "INR",
+"DF": "USD",
+"Monnaie": "INR/USD",
+"Rattachement": 0,
+"GMT": "GMT +5:30",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [77.15799, 28.567893]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2280,
+"Latitude": 35.798269,
+"Longitude": 51.478241,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A TEHERAN",
+"#Libell� abreg�": "ACE TEHERAN",
+"ML": "IRR",
+"DF": "EUR",
+"Monnaie": "IRR/EUR",
+"Rattachement": 0,
+"GMT": "GMT +3:30",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [51.478241, 35.798269]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2285,
+"Latitude": 40.395572,
+"Longitude": 49.821892,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BAKOU",
+"#Libell� abreg�": "ACE BAKOU",
+"ML": "AZN",
+"DF": "USD",
+"Monnaie": "AZN/USD",
+"Rattachement": 0,
+"GMT": "GMT +4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [49.821892, 40.395572]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2290,
+"Latitude": 33.305295,
+"Longitude": 44.350499,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BAGHDAD",
+"#Libell� abreg�": "ACE BAGHDAD",
+"ML": "JOD",
+"DF": "USD",
+"Monnaie": "JOD/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [44.350499, 33.305295]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2300,
+"Latitude": 41.918314,
+"Longitude": 12.502644,
+"Type": "ACE",
+"Libellé": "PAYEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ROME",
+"#Libell� abreg�": "ACE ROME",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [12.502644, 41.918314]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2301,
+"Latitude": 45.492934,
+"Longitude": 9.196702,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  MILAN",
+"#Libell� abreg�": "ACE  MILAN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [9.196702, 45.492934]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2301,
+"Latitude": 45.49295,
+"Longitude": 9.19672,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MILAN",
+"#Libell� abreg�": "REGIE MILAN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [9.19672, 45.49295]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2302,
+"Latitude": 41.9184,
+"Longitude": 12.5027,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  ROME",
+"#Libell� abreg�": "REGIE ROME",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [12.5027, 41.9184]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2303,
+"Latitude": 44.511537,
+"Longitude": 11.278774,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BOLOGNE",
+"#Libell� abreg�": "REGIE BOLOGNE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [11.278774, 44.511537]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2303,
+"Latitude": 44.511537,
+"Longitude": 11.278774,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A BOLOGNE",
+"#Libell� abreg�": "REGIE BOLOGNE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [11.278774, 44.511537]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2304,
+"Latitude": 41.90236,
+"Longitude": 12.45332,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC AU VATICAN",
+"#Libell� abreg�": "ACE VATICAN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [12.45332, 41.90236]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2305,
+"Latitude": 45.054653,
+"Longitude": 7.678709,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TURIN",
+"#Libell� abreg�": "REGIE TURIN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2301,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.678709, 45.054653]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2305,
+"Latitude": 45.054653,
+"Longitude": 7.678709,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TURIN",
+"#Libell� abreg�": "REGIE TURIN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.678709, 45.054653]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2310,
+"Latitude": 35.662182,
+"Longitude": 139.714279,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A TOKYO",
+"#Libell� abreg�": "ACE TOKYO",
+"ML": "JPY",
+"DF": "Null",
+"Monnaie": "JPY",
+"Rattachement": 0,
+"GMT": "GMT +9",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [139.714279, 35.662182]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2320,
+"Latitude": 31.95635,
+"Longitude": 35.899586,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A AMMAN",
+"#Libell� abreg�": "ACE AMMAN",
+"ML": "JOD",
+"DF": "USD",
+"Monnaie": "JOD/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [35.899586, 31.95635]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2330,
+"Latitude": -1.233334,
+"Longitude": 36.811706,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A NAIROBI",
+"#Libell� abreg�": "ACE NAIROBI",
+"ML": "KES",
+"DF": "USD",
+"Monnaie": "KES/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [36.811706, -1.233334]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2340,
+"Latitude": 29.306971,
+"Longitude": 47.971782,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A KUWEIT",
+"#Libell� abreg�": "ACE KUWEIT",
+"ML": "KWD",
+"DF": "Null",
+"Monnaie": "KWD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [47.971782, 29.306971]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2350,
+"Latitude": 33.859295,
+"Longitude": 35.490641,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BEYROUTH",
+"#Libell� abreg�": "ACE BEYROUTH",
+"ML": "LBP",
+"DF": "USD",
+"Monnaie": "LBP/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [35.490641, 33.859295]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2370,
+"Latitude": 32.886554,
+"Longitude": 13.19244,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A TRIPOLI",
+"#Libell� abreg�": "ACE TRIPOLI",
+"ML": "LYD",
+"DF": "USD",
+"Monnaie": "LYD/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.19244, 32.886554]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2371,
+"Latitude": 32.88659,
+"Longitude": 13.19259,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TRIPOLI",
+"#Libell� abreg�": "ACE  TRIPOLI",
+"ML": "LYD",
+"DF": "USD",
+"Monnaie": "LYD/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.19259, 32.88659]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2380,
+"Latitude": 12.630283,
+"Longitude": -8.020836,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BAMAKO",
+"#Libell� abreg�": "ACE BAMAKO",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-8.020836, 12.630283]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2390,
+"Latitude": 18.098051,
+"Longitude": -15.975665,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A NOUAKCHOT",
+"#Libell� abreg�": "ACE NOUAKCHOT",
+"ML": "MRU",
+"DF": "EUR",
+"Monnaie": "MRU/EUR",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-15.975665, 18.098051]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2400,
+"Latitude": 9.05785,
+"Longitude": 7.49508,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ABUJA",
+"#Libell� abreg�": "ACE ABUJA",
+"ML": "NGN",
+"DF": "USD",
+"Monnaie": "NGN/USD",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.49508, 9.05785]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2410,
+"Latitude": 33.71929,
+"Longitude": 73.104279,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ISLAM ABAD",
+"#Libell� abreg�": "ACE ISLAM",
+"ML": "PKR",
+"DF": "USD",
+"Monnaie": "PKR/USD",
+"Rattachement": 0,
+"GMT": "GMT +5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [73.104279, 33.71929]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2420,
+"Latitude": 52.082603,
+"Longitude": 4.306698,
+"Type": "ACE",
+"Libellé": "PAYEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LAHAYE",
+"#Libell� abreg�": "ACE AUPR Lahaye",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.306698, 52.082603]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2421,
+"Latitude": 51.907069,
+"Longitude": 4.476455,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ROTTERDAM",
+"#Libell� abreg�": "REGIE ROTTERDAM",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2420,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.476455, 51.907069]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2422,
+"Latitude": 52.385599,
+"Longitude": 4.843251,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  AMSTERDAM",
+"#Libell� abreg�": "REGIE AMSTERDAM",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2420,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.843251, 52.385599]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2422,
+"Latitude": 52.385699,
+"Longitude": 4.843551,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  AMSTERDAM",
+"#Libell� abreg�": "ACE  AMSTERDAM",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [4.843551, 52.385699]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2423,
+"Latitude": 51.72631,
+"Longitude": 5.285989,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DENBOSH",
+"#Libell� abreg�": "REGIE DENBOSH",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2420,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.285989, 51.72631]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2423,
+"Latitude": 51.72631,
+"Longitude": 5.285989,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DENBOSH",
+"#Libell� abreg�": "REGIE DENBOSH",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2422,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [5.285989, 51.72631]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2430,
+"Latitude": 52.200968,
+"Longitude": 21.011804,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A VARSOVIE",
+"#Libell� abreg�": "ACE VARSOVIE",
+"ML": "PLN",
+"DF": "EUR",
+"Monnaie": "PLN/EUR",
+"Rattachement": 0,
+"GMT": "GMT -6�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [21.011804, 52.200968]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2440,
+"Latitude": 38.701273,
+"Longitude": -9.222625,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LISBONNE",
+"#Libell� abreg�": "ACE LISBONNE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-9.222625, 38.701273]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2450,
+"Latitude": 25.331037,
+"Longitude": 51.529853,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DOHA",
+"#Libell� abreg�": "ACE DOHA",
+"ML": "QAR",
+"DF": "Null",
+"Monnaie": "QAR",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [51.529853, 25.331037]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2460,
+"Latitude": 52.513072,
+"Longitude": 13.397895,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BERLIN",
+"#Libell� abreg�": "ACE BERLIN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.397895, 52.513072]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2461,
+"Latitude": 51.242615,
+"Longitude": 6.770402,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A DUSSELDORF",
+"#Libell� abreg�": "REGIE DUSSELDORF",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2460,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [6.770402, 51.242615]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2462,
+"Latitude": 50.115285,
+"Longitude": 8.71162,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A FRUNKFURT",
+"#Libell� abreg�": "REGIE FRUNKFURT",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2460,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [8.71162, 50.115285]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2470,
+"Latitude": 14.699557,
+"Longitude": -17.469296,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DAKAR",
+"#Libell� abreg�": "ACE DAKAR",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-17.469296, 14.699557]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2480,
+"Latitude": 15.583398,
+"Longitude": 32.546543,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A KHARTOUM",
+"#Libell� abreg�": "ACE KHARTOUM",
+"ML": "SDG",
+"DF": "USD",
+"Monnaie": "SDG/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [32.546543, 15.583398]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2490,
+"Latitude": 33.514994,
+"Longitude": 36.274161,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DAMAS",
+"#Libell� abreg�": "ACE DAMAS",
+"ML": "SYP",
+"DF": "USD",
+"Monnaie": "SYP/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [36.274161, 33.514994]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2500,
+"Latitude": 59.328838,
+"Longitude": 18.04361,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A STOKHOLM",
+"#Libell� abreg�": "ACE STOKHOLM",
+"ML": "SEK",
+"DF": "Null",
+"Monnaie": "SEK",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [18.04361, 59.328838]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2510,
+"Latitude": 46.939726,
+"Longitude": 7.450901,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU ROYAUME DU MAROC A BERNE",
+"#Libell� abreg�": "ACE BERNE",
+"ML": "CHF",
+"DF": "Null",
+"Monnaie": "CHF",
+"Rattachement": 0,
+"GMT": "GMT -5�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.450901, 46.939726]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2511,
+"Latitude": 46.939718,
+"Longitude": 7.450866,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE LA MISSION PERMANENTE DU ROYAUME DU MAROC A GENEVE",
+"#Libell� abreg�": "ACE GENEVE",
+"ML": "CHF",
+"DF": "Null",
+"Monnaie": "CHF",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [7.450866, 46.939718]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2520,
+"Latitude": 36.827393,
+"Longitude": 10.176532,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A TUNIS",
+"#Libell� abreg�": "ACE TUNIS",
+"ML": "TND",
+"DF": "EUR",
+"Monnaie": "TND/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [10.176532, 36.827393]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2521,
+"Latitude": 36.827555,
+"Longitude": 10.1767,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TUNIS",
+"#Libell� abreg�": "ACE TUNIS",
+"ML": "TND",
+"DF": "EUR",
+"Monnaie": "TND/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [10.1767, 36.827555]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2530,
+"Latitude": 39.895316,
+"Longitude": 32.870726,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ANKARA",
+"#Libell� abreg�": "ACE ANKARA",
+"ML": "TRY",
+"DF": "EUR",
+"Monnaie": "TRY/EUR",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [32.870726, 39.895316]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2540,
+"Latitude": 55.743694,
+"Longitude": 37.594174,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A MOSCOU",
+"#Libell� abreg�": "ACE MOSCOU",
+"ML": "RUB",
+"DF": "USD",
+"Monnaie": "RUB/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [37.594174, 55.743694]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2550,
+"Latitude": 15.366449,
+"Longitude": 44.197536,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SANAA",
+"#Libell� abreg�": "REGIE SANAA",
+"ML": "YER",
+"DF": "USD",
+"Monnaie": "YER/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [44.197536, 15.366449]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2550,
+"Latitude": 15.366449,
+"Longitude": 44.197536,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SANAA",
+"#Libell� abreg�": "ACE SANAA",
+"ML": "YER",
+"DF": "USD",
+"Monnaie": "YER/USD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [44.197536, 15.366449]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2560,
+"Latitude": 44.792828,
+"Longitude": 20.436776,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BELGRADE",
+"#Libell� abreg�": "ACE BELGRADE",
+"ML": "RSD",
+"DF": "EUR",
+"Monnaie": "RSD/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [20.436776, 44.792828]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2570,
+"Latitude": -4.32758,
+"Longitude": 15.31357,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA KINSHASA",
+"Libell� abreg�": "ACE KINSHASA",
+"ML": "CDF",
+"DF": "EUR",
+"Monnaie": "CDF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [15.31357, -4.32758]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2580,
+"Latitude": 44.453575,
+"Longitude": 26.088228,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BUCAREST",
+"#Libell� abreg�": "ACE BUCAREST",
+"ML": "RON",
+"DF": "EUR",
+"Monnaie": "RON/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [26.088228, 44.453575]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2590,
+"Latitude": 23.584851,
+"Longitude": 58.403595,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A MASCAT",
+"#Libell� abreg�": "ACE MASCAT",
+"ML": "OMR",
+"DF": "Null",
+"Monnaie": "OMR",
+"Rattachement": 0,
+"GMT": "GMT +4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [58.403595, 23.584851]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2600,
+"Latitude": 13.51366,
+"Longitude": 2.1098,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A NIAMEY",
+"#Libell� abreg�": "ACE NIAMEY",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.1098, 13.51366]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2610,
+"Latitude": 3.86667,
+"Longitude": 11.51667,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BANGUI",
+"#Libell� abreg�": "REGIE BANGUI",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [11.51667, 3.86667]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2620,
+"Latitude": -12.0432,
+"Longitude": -77.0282,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LIMA",
+"#Libell� abreg�": "ACE LIMA",
+"ML": "PEN",
+"DF": "USD",
+"Monnaie": "PEN/USD",
+"Rattachement": 0,
+"GMT": "GMT -5�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-77.0282, -12.0432]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2630,
+"Latitude": 50.095787,
+"Longitude": 14.407472,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A PRAGUE",
+"#Libell� abreg�": "ACE PRAGUE",
+"ML": "CZK",
+"DF": "EUR",
+"Monnaie": "CZK/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [14.407472, 50.095787]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2640,
+"Latitude": 4.60971,
+"Longitude": -74.08175,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BOGOTA",
+"#Libell� abreg�": "ACE BOGOTA",
+"ML": "COP",
+"DF": "USD",
+"Monnaie": "COP/USD",
+"Rattachement": 0,
+"GMT": "GMT -5�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-74.08175, 4.60971]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2650,
+"Latitude": -8.810383,
+"Longitude": 13.238735,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LUANDA",
+"#Libell� abreg�": "REGIE LUANDA",
+"ML": "AOA",
+"DF": "USD",
+"Monnaie": "AOA/USD",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.238735, -8.810383]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2672,
+"Latitude": 18.448393,
+"Longitude": -69.947119,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SANTODOMINGO",
+"#Libell� abreg�": "ACE SANTODOMINGO",
+"ML": "DOP",
+"DF": "USD",
+"Monnaie": "DOP/USD",
+"Rattachement": 0,
+"GMT": "GMT -4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-69.947119, 18.448393]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2680,
+"Latitude": -6.227002,
+"Longitude": 106.833476,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA DJAKARTA",
+"#Libell� abreg�": "ACE DJAKARTA",
+"ML": "IDR",
+"DF": "USD",
+"Monnaie": "IDR/USD",
+"Rattachement": 0,
+"GMT": "GMT +7",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [106.833476, -6.227002]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2690,
+"Latitude": 47.5223,
+"Longitude": 18.992805,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BUDAPEST",
+"#Libell� abreg�": "ACE BUDAPEST",
+"ML": "HUF",
+"DF": "EUR",
+"Monnaie": "HUF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [18.992805, 47.5223]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2700,
+"Latitude": 23.804833,
+"Longitude": 90.418019,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DACCA",
+"#Libell� abreg�": "ACE DACCA",
+"ML": "BDT",
+"DF": "USD",
+"Monnaie": "BDT/USD",
+"Rattachement": 0,
+"GMT": "GMT +6",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [90.418019, 23.804833]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2700,
+"Latitude": 23.804944,
+"Longitude": 90.418133,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DACCA",
+"#Libell� abreg�": "REGIE DACCA",
+"ML": "BDT",
+"DF": "USD",
+"Monnaie": "BDT/USD",
+"Rattachement": 0,
+"GMT": "GMT +6",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [90.418133, 23.804944]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2710,
+"Latitude": 3.159803,
+"Longitude": 101.709235,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A KUALA LUMPUR",
+"#Libell� abreg�": "ACE KUALA",
+"ML": "MYR",
+"DF": "USD",
+"Monnaie": "MYR/USD",
+"Rattachement": 0,
+"GMT": "GMT +8",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [101.709235, 3.159803]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2720,
+"Latitude": 26.219187,
+"Longitude": 50.582764,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA MANAMA",
+"#Libell� abreg�": "ACE MANAMA",
+"ML": "BHD",
+"DF": "Null",
+"Monnaie": "BHD",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [50.582764, 26.219187]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2730,
+"Latitude": 37.527745,
+"Longitude": 126.993802,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SEOUL",
+"#Libell� abreg�": "ACE SEOUL",
+"ML": "KRW",
+"DF": "USD",
+"Monnaie": "KRW/USD",
+"Rattachement": 0,
+"GMT": "GMT +9",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [126.993802, 37.527745]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2740,
+"Latitude": 19.408942,
+"Longitude": -99.229038,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A MEXICO",
+"#Libell� abreg�": "ACE MEXICO",
+"ML": "MXN",
+"DF": "USD",
+"Monnaie": "MXN/USD",
+"Rattachement": 0,
+"GMT": "GMT -6",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [-99.229038, 19.408942]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2750,
+"Latitude": -25.73134,
+"Longitude": 28.21837,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A PRETORIA",
+"#Libell� abreg�": "REGIE PRETORIA",
+"ML": "ZAR",
+"DF": "USD",
+"Monnaie": "ZAR/USD",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [28.21837, -25.73134]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2760,
+"Latitude": 53.329525,
+"Longitude": -6.238987,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DUBLIN",
+"#Libell� abreg�": "ACE DUBLIN",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [-6.238987, 53.329525]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2770,
+"Latitude": 59.92375,
+"Longitude": 10.722767,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A OSLO",
+"#Libell� abreg�": "ACE OSLO",
+"ML": "NOK",
+"DF": "Null",
+"Monnaie": "NOK",
+"Rattachement": 0,
+"GMT": "GMT +1�",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [10.722767, 59.92375]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2780,
+"Latitude": 13.721908,
+"Longitude": 100.531994,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BANGKOK",
+"#Libell� abreg�": "ACE BANGKOK",
+"ML": "THB",
+"DF": "USD",
+"Monnaie": "THB/USD",
+"Rattachement": 0,
+"GMT": "GMT +7",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},
+"geometry": {
+                "type": "Point",
+                "coordinates": [100.531994, 13.721908]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2800,
+"Latitude": 31.90618,
+"Longitude": 35.203135,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DU BUREAU DE LIAISON DU ROYAUME DU MAROC A RAMALLAH",
+"#Libell� abreg�": "ACE RAMALLAH",
+"ML": "ILS",
+"DF": "USD",
+"Monnaie": "ILS/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [35.203135, 31.90618]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2850,
+"Latitude": 50.428172,
+"Longitude": 30.514529,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A KIEV",
+"#Libell� abreg�": "ACE KIEV",
+"ML": "UAH",
+"DF": "USD",
+"Monnaie": "UAH/USD",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [30.514529, 50.428172]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2860,
+"Latitude": 5.55602,
+"Longitude": -0.1969,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROCA ACCRA",
+"#Libell� abreg�": "ACE ACCRA",
+"ML": "GHS",
+"DF": "USD",
+"Monnaie": "GHS/USD",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-0.1969, 5.55602]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2870,
+"Latitude": -8.83682,
+"Longitude": 13.23432,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A OUAGADOUGOU",
+"#Libell� abreg�": "REGIE OUAGADOUGOU",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.23432, -8.83682]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2880,
+"Latitude": -35.351118,
+"Longitude": 149.106403,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A CANBERRA",
+"#Libell� abreg�": "ACE CANBERRA",
+"ML": "AUD",
+"DF": "Null",
+"Monnaie": "AUD",
+"Rattachement": 0,
+"GMT": "GMT +10",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [149.106403, -35.351118]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2890,
+"Latitude": 21.033339,
+"Longitude": 105.836638,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A HANOI",
+"Libell� abreg�": "ACE HANOI",
+"ML": "VND",
+"DF": "USD",
+"Monnaie": "VND/USD",
+"Rattachement": 0,
+"GMT": "GMT +7",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [105.836638, 21.033339]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2900,
+"Latitude": 14.628434,
+"Longitude": -90.522713,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE DE L'AMBASSADE DU ROYAUME DU MAROC AU GUATEMALA (GUATEMALA)",
+"#Libell� abreg�": "ACE GUATEMALA",
+"ML": "GTQ",
+"DF": "USD",
+"Monnaie": "GTQ/USD",
+"Rattachement": 0,
+"GMT": "GMT -6",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-90.522713, 14.628434]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2910,
+"Latitude": 12.10672,
+"Longitude": 15.0444,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE  DU ROYAUME DU MAROC AU TCHAD (N'DJAMENA)",
+"#Libell� abreg�": "REGIE TCHAD N'DJAMENA",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [15.0444, 12.10672]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2920,
+"Latitude": 45.827149,
+"Longitude": 15.962711,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE DE L'AMBASSADE DU ROYAUME DU MAROC EN CROATIE (ZAGREB)",
+"#Libell� abreg�": "ACE ZAGREB",
+"ML": "HRK",
+"DF": "EUR",
+"Monnaie": "HRK/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [15.962711, 45.827149]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2926,
+"Latitude": 9.701255,
+"Longitude": 2.217878,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A BENIN",
+"#Libell� abreg�": "ACE BENIN",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.217878, 9.701255]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2928,
+"Latitude": -1.94995,
+"Longitude": 30.05885,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A RWANDA",
+"#Libell� abreg�": "ACE RWANDA",
+"ML": "RWF",
+"DF": "EUR",
+"Monnaie": "RWF/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [30.05885, -1.94995]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2932,
+"Latitude": -6.793436,
+"Longitude": 39.222006,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A  DAR ESSALAM ( TANZANIE)",
+"#Libell� abreg�": "ACE DAR ESSALAM TANZANIE",
+"ML": "TZS",
+"DF": "EUR",
+"Monnaie": "TZS/EUR",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [39.222006, -6.793436]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2934,
+"Latitude": -25.93103,
+"Longitude": 32.581854,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L AMBASSADE DU ROYAUME DU MAROC A MAPUTO (MOZANBIQUE)",
+"#Libell� abreg�": "ACE MAPUTO MOZANBIQUE",
+"ML": "MZM",
+"DF": "EUR",
+"Monnaie": "MZM/EUR",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [32.581854, -25.93103]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2936,
+"Latitude": 14.559374,
+"Longitude": 121.017607,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A PHILIPPINES",
+"#Libell� abreg�": "ACE PHILIPPINES",
+"ML": "PHP",
+"DF": "USD",
+"Monnaie": "PHP/USD",
+"Rattachement": 0,
+"GMT": "GMT +8",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [121.017607, 14.559374]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2938,
+"Latitude": 51.153465,
+"Longitude": 71.429274,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A KAZAKHSTAN",
+"#Libell� abreg�": "ACE KAZAKHTAN",
+"ML": "KZT",
+"DF": "USD",
+"Monnaie": "KZT/USD",
+"Rattachement": 0,
+"GMT": "GMT +6",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [71.429274, 51.153465]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2940,
+"Latitude": 8.4255,
+"Longitude": -80.1054,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A PANAMA",
+"#Libell� abreg�": "ACE PANAMAanama",
+"ML": "USD",
+"DF": "Null",
+"Monnaie": "USD",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-80.1054, 8.4255]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2942,
+"Latitude": -25.263739,
+"Longitude": -57.575925,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A PARAGUAY",
+"#Libell� abreg�": "ACE PARAGUAY",
+"ML": "PYG",
+"DF": "USD",
+"Monnaie": "PYG/USD",
+"Rattachement": 0,
+"GMT": "GMT -4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-57.575925, -25.263739]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2944,
+"Latitude": -34.869034,
+"Longitude": -56.158699,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE AMBASSADE DU ROYAUME DU MAROC A URUGUAY",
+"#Libell� abreg�": "ACE URUGUAY",
+"ML": "UYU",
+"DF": "USD",
+"Monnaie": "UYU/USD",
+"Rattachement": 0,
+"GMT": "GMT -3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-56.158699, -34.869034]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2946,
+"Latitude": 43.677589,
+"Longitude": 3.985579,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A  CASTRIES",
+"#Libell� abreg�": "ACE CASTRIES",
+"ML": "XCD",
+"DF": "USD",
+"Monnaie": "XCD/USD",
+"Rattachement": 0,
+"GMT": "GMT -4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.985579, 43.677589]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2948,
+"Latitude": 23.12525,
+"Longitude": -82.419311,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L EMBASSADE DU MAROC A HAVANE",
+"#Libell� abreg�": "ACE HAVANE",
+"ML": "XOF",
+"DF": "Null",
+"Monnaie": "XOF",
+"Rattachement": 0,
+"GMT": "GMT -5",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-82.419311, 23.12525]
+            }},
+            {
+            "type": "Feature",
+            "properties":{
+"Code": 2950,
+"Latitude": -15.420019,
+"Longitude": 28.304466,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LUSAKA ( ZAMBIE)",
+"#Libell� abreg�": "ACE LUSAKA",
+"ML": "XOF",
+"DF": "Null",
+"Monnaie": "XOF",
+"Rattachement": 0,
+"GMT": "GMT +2",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [28.304466, -15.420019]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2952,
+"Latitude": -4.274814,
+"Longitude": 15.28218,
+"Type": "ACE",
+"Libellé": "AGENT COMPTABLE AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC  REBUBLIC CONGO ( BRAZZAVILLE)",
+"#Libell� abreg�": "ACE REBUBLIC CONGO",
+"ML": "XOF",
+"DF": "Null",
+"Monnaie": "XOF",
+"Rattachement": 0,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [15.28218, -4.274814]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 3342,
+"Latitude": 43.607305,
+"Longitude": 3.857234,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MONTPELLIER",
+"#Libell� abreg�": "REGIE  MONTPELLER",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.857234, 43.607305]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 3342,
+"Latitude": 43.607305,
+"Longitude": 3.857234,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MONTPELLIER",
+"#Libell� abreg�": "REGIE  MONTPELLER",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2207,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.857234, 43.607305]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 3919,
+"Latitude": 40.44957,
+"Longitude": -3.6831,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A MADRID",
+"#Libell� abreg�": "REGIE  MADRID",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-3.6831, 40.44957]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 3931,
+"Latitude": 20.93098,
+"Longitude": -17.03465,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A NOUADHIBOU",
+"#Libell� abreg�": "REGIE  NOUADHIBOU",
+"ML": "MRU",
+"DF": "EUR",
+"Monnaie": "MRU/EUR",
+"Rattachement": 2390,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-17.03465, 20.93098]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4025,
+"Latitude": 47.83165,
+"Longitude": 1.937676,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ORLEANS",
+"#Libell� abreg�": "REGIE ORLEANS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [1.937676, 47.83165]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4025,
+"Latitude": 47.83165,
+"Longitude": 1.937676,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ORLEANS",
+"#Libell� abreg�": "REGIE ORLEANS",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2214,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [1.937676, 47.83165]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4026,
+"Latitude": 38.130803,
+"Longitude": 13.34508,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PALERME",
+"#Libell� abreg�": "REGIE PALERME",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.34508, 38.130803]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4035,
+"Latitude": -18.91368,
+"Longitude": 47.53613,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ANTANANARIVO",
+"#Libell� abreg�": "REGIE ANTANANARIVO",
+"ML": "MGA",
+"DF": "EUR",
+"Monnaie": "MGA/EUR",
+"Rattachement": 0,
+"GMT": "GMT +3",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [47.53613, -18.91368]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4327,
+"Latitude": 45.412839,
+"Longitude": 10.95308,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VERONE",
+"#Libell� abreg�": "REGIE VERONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [10.95308, 45.412839]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 4327,
+"Latitude": 45.412839,
+"Longitude": 10.95308,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A VERONE",
+"#Libell� abreg�": "REGIE VERONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [10.95308, 45.412839]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4422,
+"Latitude": 41.058839,
+"Longitude": 29.021185,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ISTANBUL",
+"Libell� abreg�": "REGIE ISTANBUL",
+"ML": "TRY",
+"DF": "EUR",
+"Monnaie": "TRY/EUR",
+"Rattachement": 2530,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [29.021185, 41.058839]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4717,
+"Latitude": 39.582143,
+"Longitude": 2.64505,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PALMA DE MALLORCA",
+"#Libell� abreg�": "REGIE PALMA DE MALLORCA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.64505, 39.582143]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4717,
+"Latitude": 39.582143,
+"Longitude": 2.64505,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A PALMA DE MALLORCA",
+"#Libell� abreg�": "REGIE PALMA DE MALLORCA",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.64505, 39.582143]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4730,
+"Latitude": 41.974586,
+"Longitude": 2.802228,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  GERONE",
+"#Libell� abreg�": "REGIE GERONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2192,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.802228, 41.974586]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4730,
+"Latitude": 41.974586,
+"Longitude": 2.802228,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A  GERONE",
+"#Libell� abreg�": "REGIE GERONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.802228, 41.974586]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4817,
+"Latitude": 43.677589,
+"Longitude": 3.985579,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L' AMBASSADE DU MAROC A CASTRIES SAINTE LUCIES",
+"#Libell� abreg�": "REGIE CASTRIES SAINTE LUCIES",
+"ML": "XCD",
+"DF": "USD",
+"Monnaie": "XCD/USD",
+"Rattachement": 0,
+"GMT": "GMT -4",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.985579, 43.677589]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 5052,
+"Latitude": 41.919314,
+"Longitude": 12.508644,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ROME",
+"#Libell� abreg�": "REGIE ROME",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [12.508644, 41.919314]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 5122,
+"Latitude": 38.130803,
+"Longitude": 13.34508,
+"Type": "REGIE",
+"Libell�": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A NAPLES",
+"#Libell� abreg�": "REGIE NAPLES",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2300,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.34508, 38.130803]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 7241,
+"Latitude": 41.128899,
+"Longitude": 1.142728,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TARAGONE",
+"#Libell� abreg�": "REGIE TARAGONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2192,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [1.142728, 41.128899]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 7241,
+"Latitude": 41.128899,
+"Longitude": 1.142728,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A TARAGONE",
+"#Libell� abreg�": "REGIE TARAGONE",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2190,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [1.142728, 41.128899]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 8310,
+"Latitude": 48.744654,
+"Longitude": 2.393631,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ORLY",
+"#Libell� abreg�": "REGIE ORLY",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2201,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.393631, 48.744654]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 8310,
+"Latitude": 48.744654,
+"Longitude": 2.393631,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DU CONSULAT GENERAL DU ROYAUME DU MAROC A ORLY",
+"#Libell� abreg�": "REGIE ORLY",
+"ML": "EUR",
+"DF": "Null",
+"Monnaie": "EUR",
+"Rattachement": 2200,
+"GMT": "GMT +1",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [2.393631, 48.744654]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 1080,
+"Latitude": 34.011185,
+"Longitude": -6.821639,
+"Type": "TCDC",
+"Libellé": "TCDC",
+"#Libell� abreg�": "TCDC",
+"ML": "MAD",
+"DF": "Null",
+"Monnaie": "MAD",
+"Rattachement": 0,
+"GMT": "GMT",
+"Nombre actes 2018": 2500,
+"D�pense 2018": 100000,
+"Recette 2018": 12500
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-6.821639, 34.011185]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2070,
+"Latitude": 42.67307,
+"Longitude": 23.321119,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SOFIA",
+"#Libell� abreg�": "REGIE SOFIA",
+"ML": "BGN",
+"DF": "EUR",
+"Monnaie": "BGN/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +2",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [23.321119, 42.67307]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2080,
+"Latitude": 12.36566,
+"Longitude": -1.53388,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A YAOUNDE",
+"#Libell� abreg�": "REGIE YAOUNDE",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +1",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [-1.53388, 12.36566]
+            }},
+            {
+            "type": "Feature",
+            "properties":  {
+"Code": 2180,
+"Latitude": 9.0003,
+"Longitude": 38.772609,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ADDIS ABBEBA",
+"#Libell� abreg�": "REGIE ABBEBA",
+"ML": "ETB",
+"DF": "USD",
+"Monnaie": "ETB/USD",
+"Rattachement": 1080,
+"GMT": "GMT +3",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [38.772609, 9.0003]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2550,
+"Latitude": 15.366449,
+"Longitude": 44.197536,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A SANAA",
+"#Libell� abreg�": "REGIE SANAA",
+"ML": "YER",
+"DF": "USD",
+"Monnaie": "YER/USD",
+"Rattachement": 1080,
+"GMT": "GMT +3",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [44.197536, 15.366449]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2610,
+"Latitude": 3.86667,
+"Longitude": 11.51667,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A BANGUI",
+"Libell� abreg�": "REGIE BANGUI",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +1",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [11.51667, 3.86667]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2650,
+"Latitude": -8.810383,
+"Longitude": 13.238735,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A LUANDA",
+"#Libell� abreg�": "REGIE LUANDA",
+"ML": "AOA",
+"DF": "USD",
+"Monnaie": "AOA/USD",
+"Rattachement": 1080,
+"GMT": "GMT +1",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.238735, -8.810383]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2700,
+"Latitude": 23.804944,
+"Longitude": 90.418133,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A DACCA",
+"#Libell� abreg�": "REGIE DACCA",
+"ML": "BDT",
+"DF": "USD",
+"Monnaie": "BDT/USD",
+"Rattachement": 1080,
+"GMT": "GMT +6",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [90.418133, 23.804944]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2750,
+"Latitude": -25.73134,
+"Longitude": 28.21837,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A PRETORIA",
+"#Libell� abreg�": "REGIE PRETORIA",
+"ML": "ZAR",
+"DF": "USD",
+"Monnaie": "ZAR/USD",
+"Rattachement": 1080,
+"GMT": "GMT",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [28.21837, -25.73134]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2830,
+"Latitude": 3.751238,
+"Longitude": 8.736769,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A MALABO",
+"#Libell� abreg�": "REGIE MALABO",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +1",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [8.736769, 3.751238]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2870,
+"Latitude": -8.83682,
+"Longitude": 13.23432,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A OUAGADOUGOU",
+"#Libell� abreg�": "REGIE OUAGADOUGOU",
+"ML": "XOF",
+"DF": "EUR",
+"Monnaie": "XOF/EUR",
+"Rattachement": 1080,
+"GMT": "GMT",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [13.23432, -8.83682]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 2910,
+"Latitude": 12.10672,
+"Longitude": 15.0444,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE  DU ROYAUME DU MAROC AU TCHAD (N'DJAMENA)",
+"#Libell� abreg�": "REGIE TCHAD N'DJAMENA",
+"ML": "XAF",
+"DF": "EUR",
+"Monnaie": "XAF/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +2",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [15.0444, 12.10672]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4035,
+"Latitude": -18.91368,
+"Longitude": 47.53613,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L'AMBASSADE DU ROYAUME DU MAROC A ANTANANARIVO",
+"#Libell� abreg�": "REGIE ANTANANARIVO",
+"ML": "MGA",
+"DF": "EUR",
+"Monnaie": "MGA/EUR",
+"Rattachement": 1080,
+"GMT": "GMT +3",
+"Nombre actes 2018": "",
+"D�pense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [47.53613, -18.91368]
+            }},
+            {
+            "type": "Feature",
+            "properties": {
+"Code": 4817,
+"Latitude": 43.677589,
+"Longitude": 3.985579,
+"Type": "REGIE",
+"Libellé": "REGISSEUR AUPRES DE L' AMBASSADE DU MAROC A CASTRIES SAINTE LUCIES",
+"Libellé abregé": "REGIE CASTRIES SAINTE LUCIES",
+"ML": "XCD",
+"DF": "USD",
+"Monnaie": "XCD/USD",
+"Rattachement": 1080,
+"GMT": "GMT -4",
+"Nombre actes 2018": "",
+"Dépense 2018": "",
+"Recette 2018": ""
+},"geometry": {
+                "type": "Point",
+                "coordinates": [3.985579, 43.677589]
+            }}
+
+
+        ]};
+      
+var redIcon = L.icon({
+iconUrl:'images/red.png',
+iconSize: [26, 42],	
+});
+var purpleIcon = L.icon({
+iconUrl:'images/purple.png',
+iconSize: [26, 42],		
+});
+var yellowIcon = L.icon({
+iconUrl:'images/yellow.png',
+iconSize: [26, 42],		
+});
+
+/****************************** Le menu pour choisir les proprités qu'elles doivent s'affichent **********************/
+
+var Code = new L.LayerGroup();
+var Type = new L.LayerGroup();
+var Libellé = new L.LayerGroup();
+var Monnaie = new L.LayerGroup();
+var GMT = new L.LayerGroup();
+var Rattachement = new L.LayerGroup();
+
+
+        var overlays2 = {
+            "Code ": Code,
+            "Type": Type,
+            "Libellé": Libellé,
+            "Monnaie": Monnaie,
+            "GMT": GMT,
+            "Rattachement": Rattachement
+         };
+
+/*****************************************Le filtrage des types des ambassades de TGR ****************************/
+
+/************ TCDC ***************/
+var TCDC = new L.LayerGroup();
+
+	 var TCDCPoints = L.geoJson(data, {
+    filter: function (feature, layer) {
+        return feature.properties.Type == "TCDC";
+    }, 
+       pointToLayer: function (feature, latlng) {
+           if (overlays2["Code"]==true){
+            return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: purpleIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code).addTo(Code);
+           }else{
+           return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: purpleIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+       }}
+});
+TCDCPoints.addTo(TCDC)
+
+/************ ACE ***************/
+var ACE = new L.LayerGroup();
+
+    var ACEPoints = L.geoJson(data, {
+    filter: function (feature, layer) {
+        return feature.properties.Type == "ACE";
+    }, 
+       pointToLayer: function (feature, latlng) {
+           return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: redIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+       }
+});
+ACEPoints.addTo(ACE)
+
+/************ REGIE ***************/		
+var REGIE = new L.LayerGroup();
+var REGIEPoints = L.geoJson(data, {
+    filter: function (feature, layer) {
+        return feature.properties.Type == "REGIE";
+    }, 
+       pointToLayer: function (feature, latlng) {
+           return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: yellowIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+       }
+});
+REGIEPoints.addTo(REGIE)
+
+/************ Rattachement ***************/    
+    var Tous = new L.LayerGroup();
+    
+   var TousPoints = L.geoJson(data, {
+       
+    pointToLayer: function (feature, latlng) { 
+
+       
+    //     jQuery.each (data, function(feature, latlng) {
+	// 	if(feature.properties.Rattachement != 0){
+    //         var lngs =  [[feature.properties.Latitude,feature.properties.Longitude], [feature.properties.Latitude,feature.properties.Longitude]];
+    //         var polyline = L.polyline(lngs, {color: 'red'});
+    //        polyline.addTo(Tous);
+	// }
+	// });
+
+       
+        if (feature.properties.Type == "REGIE"){
+            return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: yellowIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+        }else if (feature.properties.Type == "ACE"){
+            return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: redIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);  
+        } else{
+            return L.marker([feature.properties.Latitude,feature.properties.Longitude], {icon: purpleIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+        }
+     },
+ 
+    
+    },
+      
+   );
+   TousPoints.addTo(Tous);
+
+
+     
+   
+
+// var linestring1 = L.geoJson(data, {
+//     pointToLayer2: function (feature, latlng) {
+//         if (feature.properties.Rattachement != 0){
+//             console.log("rattachement : "+feature.properties.Rattachement);
+//             // return L.marker(latlng, {icon: yellowIcon}).bindPopup("<b>Code: </b>"+feature.properties.Code+"<br><b>Type: </b>"+feature.properties.Type+"<br><b>Libellé: </b>"+feature.properties.Libellé+"<br><b>Monnaie: </b>"+feature.properties.Monnaie+"<br><b>GMT: </b>"+feature.properties.GMT+"<br><b>Rattachement: </b>"+feature.properties.Rattachement);
+       
+//         }
+//     }
+//  } );
+//  linestring1.addTo(Tous);
+
+
+//    console.log("befor rattachement : ");
+//    console.log("data : "+data.lenght);
+//    for(i=0;i<data.lenght;i++){
+//     console.log("in for i : ");
+//             if( data[i].Rattachement!=0 ){
+//                 console.log("in  if : ");
+//                 for(j=0;j<data.lenght;j++){
+        
+//             if(data[i].Rattachement===data[j].Code){
+//                 //  -- Polyline (coordonates[i],coordonates[j])
+//                 // "coordinates": [[-100, 40], [-105, 45], [-110, 55]]
+//                 console.log("rattachement : "+data[i].Rattachement+ "id : "+data[j].Code);
+//                 var latlngs = [ data[i].geometry.coordinates, data[j].geometry.coordinates];
+//                 var polyline = L.polyline(latlngs, {color: 'red'});
+//                 polyline.addTo(Tous);
+
+//             }           
+//                 }
+
+//             }
+   
+            
+//         }
+//         console.log("after rattachement : ");
+
+ 
+
+	    var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+'Imagery � <a href="http://mapbox.com">Mapbox</a>' + ', icons by <a href="http://www.flaticon.com/">Freepik</a>'
+			mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+	
+	    var satellite  = L.tileLayer(mbUrl, {id: 'mapbox.satellite', attribution: mbAttr}),
+		emerald   = L.tileLayer(mbUrl, {id: 'mapbox.emerald', attribution: mbAttr}),
+		outdoors   = L.tileLayer(mbUrl, {id: 'mapbox.outdoors', attribution: mbAttr}),
+	    streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets', attribution: mbAttr});
+
+		var map = L.map('mymap', {
+			center: [31.632889,-8.010685],
+			zoom: 5,
+			layers: [emerald, outdoors, satellite, streets] // last baselayer is the one checked
+		});
+
+
+
+
+		
+        map.doubleClickZoom.disable();
+        var baseLayers = {
+			"Emerald": emerald,
+			"Outdoors": outdoors,
+			"Satellite": satellite,
+            "Streets": streets// La dérnière est par défaut
+		
+        };
+        var baseLayers2 = {
+	};
+
+//Le menu des types des ambassades
+		var overlays1 = {
+           
+			"<img src='images/location-pin-purple-16.png'> TCDC ": TCDC,
+			"<img src='images/location-pin-red-16.png'> ACE": ACE,
+			"<img src='images/location-pin-yellow-16.png'> REGIE": REGIE,
+            "<img src='images/ratt.png'> Rattachement": Tous
+            
+		};
+
+
+            L.control.layers(baseLayers, overlays1, {position: 'topleft', collapsed: false}).addTo(map);
+            L.control.layers(baseLayers2, overlays2, {position: 'topleft', collapsed: false}).addTo(map);
+            
+         
+       
+	</script>
+</body></html>
